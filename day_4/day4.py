@@ -43,7 +43,3 @@ radius = 10
 area = 3.14 * radius ** 2
 print("The area of a circle with radius %d is %.0f meters square." %(radius,area) )
 print('The area of a circle with radius {} is {} meters square.'.format( radius,int(area) ) )
-a=8
-b=6
-print('{} + {} = {}'.format(a,b,a+b))
-print("%d + %d = %d" %(a,b,a+b))
