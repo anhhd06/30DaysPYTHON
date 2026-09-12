@@ -1,47 +1,32 @@
-# sets
-it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
-A = {19, 22, 24, 20, 25, 26}
-B = {19, 22, 20, 25, 26, 24, 28, 27}
-age = [22, 19, 24, 25, 26, 24, 25, 24]
+'''Tạo một từ điển trống có tên là dog
+Thêm tên, màu sắc, giống chó, chiều dài chân, tuổi vào từ điển chó.
+Tạo một từ điển học sinh và thêm các khóa là first_name, last_name, gender, age, marital status, skills, country, city và address cho từ điển.
+Tìm độ dài của từ điển học sinh
+Lấy giá trị của các kỹ năng và kiểm tra kiểu dữ liệu, nó phải là một danh sách.
+Điều chỉnh giá trị kỹ năng bằng cách thêm một hoặc hai kỹ năng.
+Lấy danh sách các khóa từ điển.
+Lấy các giá trị của từ điển dưới dạng danh sách
+Chuyển đổi từ điển thành danh sách các bộ dữ liệu bằng phương thức items().
+Xóa một trong các mục trong từ điển
+Xóa một trong các từ điển'''
 
-'''Tìm độ dài của tập hợp it_companies
-Thêm 'Twitter' vào it_companies
-Thêm nhiều công ty CNTT cùng lúc vào tập hợp it_companies
-Xóa một trong các công ty khỏi tập hợp it_companies
-Sự khác biệt giữa "remove" và "discard" là gì?'''
-
-print(len(it_companies))
-it_companies.add('Twitter')
-it_companies.update(['Fpt','Instargram'])
-print(it_companies)
-it_companies.pop()
-print(it_companies)
-
-'''Kết hợp A và B
-Tìm giao điểm A và B
-A có phải là tập con của B không?
-A và B có phải là các tập hợp rời nhau không?
-Nối A với B và B với A.
-Hiệu đối xứng giữa A và B là gì?
-Xóa hoàn toàn các bộ'''
-
-C = A.union(B)
-print(C)
-D = A.intersection(B)
-print(D)
-print(A.issubset(B))
-print(len(D)==0)
-print(A.symmetric_difference(B))
-del A
-del B
+dog = {}
+dog['name'] = 'Tom'
+dog['color'] = 'yellow'
+dog['breed'] = 'Shiba'
+dog['age'] = 1
+student = {'first_name':'Ho Dinh','last_name':'Anh','gender':'male','age':20,'marital':'false','skills':['C++','Python','Java']}
+print(len(student))
+print(type(student['skills']))
+student['skills'].append('Html')
+student['skills'].append('Css')
+print(student['skills'])
+keys_student = student.keys()
+print(keys_student)
+print(student.items())
+student.popitem()
+print(dog)
+del dog
 
 
-'''Chuyển đổi các độ tuổi thành một tập hợp và so sánh độ dài của danh sách và tập hợp, tập hợp nào lớn hơn?
-Giải thích sự khác biệt giữa các kiểu dữ liệu sau: chuỗi (string), danh sách (list), bộ dữ liệu (tuple) và tập hợp (set).
-Tôi là một giáo viên và tôi thích truyền cảm hứng và dạy dỗ mọi người. Câu này có bao nhiêu từ độc đáo? Hãy sử dụng phương pháp tách từ và thiết lập để tìm ra các từ độc đáo.'''
 
-age_list = list(age)
-print('Danh sach dai hon: ',len(age_list) > len(age))
-text ='I am a teacher and I love to inspire and teach people'
-Docdao = set(text.split())
-print(Docdao,len(Docdao))

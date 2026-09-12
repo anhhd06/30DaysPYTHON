@@ -1,45 +1,47 @@
-'''Tạo một tuple rỗng
-Tạo một bộ dữ liệu chứa tên của các chị em gái và anh em trai của bạn (anh chị em tưởng tượng cũng được).
-Ghép các cặp anh chị em ruột lại với nhau và gán chúng cho các anh chị em ruột.
-Bạn có bao nhiêu anh chị em?
-Chỉnh sửa bộ dữ liệu anh chị em ruột và thêm tên cha và mẹ của bạn vào đó, rồi gán nó cho biến family_members.'''
+# sets
+it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
+A = {19, 22, 24, 20, 25, 26}
+B = {19, 22, 20, 25, 26, 24, 28, 27}
+age = [22, 19, 24, 25, 26, 24, 25, 24]
+
+'''Tìm độ dài của tập hợp it_companies
+Thêm 'Twitter' vào it_companies
+Thêm nhiều công ty CNTT cùng lúc vào tập hợp it_companies
+Xóa một trong các công ty khỏi tập hợp it_companies
+Sự khác biệt giữa "remove" và "discard" là gì?'''
+
+print(len(it_companies))
+it_companies.add('Twitter')
+it_companies.update(['Fpt','Instargram'])
+print(it_companies)
+it_companies.pop()
+print(it_companies)
+
+'''Kết hợp A và B
+Tìm giao điểm A và B
+A có phải là tập con của B không?
+A và B có phải là các tập hợp rời nhau không?
+Nối A với B và B với A.
+Hiệu đối xứng giữa A và B là gì?
+Xóa hoàn toàn các bộ'''
+
+C = A.union(B)
+print(C)
+D = A.intersection(B)
+print(D)
+print(A.issubset(B))
+print(len(D)==0)
+print(A.symmetric_difference(B))
+del A
+del B
 
 
-tup = ()
-my_sister = ('Yen','Giang')
-my_brother = ('Viet','An','Dung')
-bro_and_sis = my_sister + my_brother
-print(len(bro_and_sis))
-family_members = list(bro_and_sis)
-family_members.append('Hai')
-family_members.append('Lam')
-print(family_members)
+'''Chuyển đổi các độ tuổi thành một tập hợp và so sánh độ dài của danh sách và tập hợp, tập hợp nào lớn hơn?
+Giải thích sự khác biệt giữa các kiểu dữ liệu sau: chuỗi (string), danh sách (list), bộ dữ liệu (tuple) và tập hợp (set).
+Tôi là một giáo viên và tôi thích truyền cảm hứng và dạy dỗ mọi người. Câu này có bao nhiêu từ độc đáo? Hãy sử dụng phương pháp tách từ và thiết lập để tìm ra các từ độc đáo.'''
 
-
-'''Tách anh chị em ruột và cha mẹ khỏi family_members
-Tạo các bộ dữ liệu gồm trái cây, rau củ và sản phẩm động vật. Kết hợp ba bộ dữ liệu này và gán cho một biến có tên là food_stuff_tp.
-Thay đổi tuple about food_stuff_tp thành danh sách food_stuff_lt.
-Cắt bỏ phần tử hoặc các phần tử ở giữa từ bộ dữ liệu food_stuff_tp hoặc danh sách food_stuff_lt.
-Cắt bỏ ba mục đầu tiên và ba mục cuối cùng khỏi danh sách food_stuff_lt.
-Xóa hoàn toàn tuple food_stuff_tp
-Kiểm tra xem một mục có tồn tại trong bộ dữ liệu (tuple) hay không:
-Kiểm tra xem 'Estonia' có phải là một quốc gia Bắc Âu hay không.
-
-Kiểm tra xem 'Iceland' có phải là một quốc gia Bắc Âu hay không.'''
-
-
-fruits = ('apple','orange','watermelon','banana')
-vegetables = ('tomato','patato')
-animal_products = ('meat','milk','egg')
-food_stuff_tp = fruits + vegetables + animal_products
-food_stuff_lt = list(food_stuff_tp)
-print(food_stuff_lt)
-del food_stuff_lt[0:3]
-del food_stuff_lt[-3:]
-print(food_stuff_lt)
-del food_stuff_tp
-nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
-print('Estonia' in nordic_countries)
-print('Iceland' in nordic_countries)
-# Hồ Đình Ánh đẹp trai
-print('Ho Dinh Anh dep trai')
+age_list = list(age)
+print('Danh sach dai hon: ',len(age_list) > len(age))
+text ='I am a teacher and I love to inspire and teach people'
+Docdao = set(text.split())
+print(Docdao,len(Docdao))
